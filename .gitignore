@@ -1,8 +1,10 @@
 # virtual environment
 .venv/
 
+# RUN
 # db and logs
 run/*
 !run/.gitkeep
-
+# build
+__pycache__
 *.pyc

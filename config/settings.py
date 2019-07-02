@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
 ]
 MY_APPS = [
+    'src.api',
     'src.core',
 ]
 
@@ -99,7 +100,6 @@ TEMPLATES = [
             # https://docs.djangoproject.com/en/2.2/topics/templates/#module-django.template.backends.django
             'libraries': {
                 'add_attr': 'src.templates.templatetags.add_attr',
-                'tag_filter': 'src.templates.templatetags.tag_filter',
             },
         },
     },
@@ -137,6 +137,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# https://www.django-rest-framework.org/tutorial/quickstart/#pagination
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

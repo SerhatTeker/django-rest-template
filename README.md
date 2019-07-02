@@ -23,6 +23,8 @@ $ ./manage.py migrate
 
 ```bash
 $ ./manage.py runserver
+# or
+make run
 ```
 
 ## It Worked!
@@ -34,5 +36,4 @@ Go to: http://localhost:8000/
 
 ## TODOs
 
-+ [x] migrate to Django 2.0.12
 + [ ] add logging.ini config
