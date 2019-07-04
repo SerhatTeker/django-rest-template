@@ -62,4 +62,5 @@ $ firefox http://127.0.0.1:8000/users/
 
 ## TODOs
 
-+ [ ] add logging.ini config
++ [x] add logging.ini config
++ [x] add editorconfig
