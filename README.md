@@ -27,9 +27,35 @@ $ ./manage.py runserver
 make run
 ```
 
-## It Worked!
+### It Worked!
 
 Go to: http://localhost:8000/
+
+
+## Testing our API:
+
+### 1. Superuser/Admin creation
+```bash
+# migrate db
+$ python manage.py migrate
+
+# create superuser
+$ python manage.py createsuperuser --email admin@example.com --username admin
+# then set password `password123`
+
+```
+### 2. Test
+
+```bash
+# using tools like curl:
+$ curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/
+
+# or httpie:
+$ http -a admin:password123 http://127.0.0.1:8000/users/
+
+# or go to URL:
+$ firefox http://127.0.0.1:8000/users/
+```
 
 
 ------
